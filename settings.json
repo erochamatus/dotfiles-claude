@@ -8,6 +8,19 @@
       "Edit"
     ]
   },
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.claude/sync-auto.sh",
+            "async": true
+          }
+        ]
+      }
+    ]
+  },
   "mcpServers": {
     "elevenlabs": {
       "command": "npx",
