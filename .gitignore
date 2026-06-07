@@ -7,4 +7,17 @@ sessions/
 shell-snapshots/
 plugins/
 mcp-needs-auth-cache.json
+image-cache/
+paste-cache/
+worktrees/
+jobs/
+daemon*
+telemetry/
+scheduled_tasks.lock
+file-history/
 *.jsonl
+.last-cleanup
+projects/*/.DS_Store
+projects/*/subagents/
+projects/*/tool-results/
+projects/-Users-erocha-Library-CloudStorage*/

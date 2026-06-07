@@ -1,0 +1,11 @@
+- [Dashboard Proyectos](dashboard_proyectos.md) — Estado visual (🟢🟡⚠️🔴) de los 7 proyectos activos; fuente canónica: ~/Desktop/PROYECTOS_ESTATUS.md
+- [EEH Planeación 2027](project_eeh.md) — PPTX ejecutivo AState+TxState; funnel, CPL, perdidos por etapa; slides 4–8 listas, esperando feedback cliente
+- [Trujillo Newsletter & Social](project_trujillo_newsletter.md) — 4 cuentas (LinkedIn+X × CJ+TCA); 148 posts/12 semanas; Semana 1 activa jun 2026; Lun+Mié ya posted; Jue+Vie pendientes
+- [Feedback parrilla social](feedback_parrilla_social.md) — Verificar posts ya publicados; marcar Posted en master col10; preferir artículos web cortos; X se postea manual
+- [Cuentas de Claude](user_accounts.md) — Cuenta compartida con hija: enrique@ownmedia.com.mx; cuenta personal: enrique@dstudio.mx
+- [GENJO Project Context](project_genjo.md) — Lead validation project for AState+TxState; file locations, FTP masters, COMPARACION metrics, Power BI comparativo
+- [CMAGAZINE Project Context](project_cmagazine.md) — WordPress redesign + WP Engine→Closte migration; CSS fixes, PHP template, JS image fix, Drive/OneDrive folder structure
+- [Conciencia Jurídica Podcast](project_elevenlabs.md) — Revista jurídica; pipeline ElevenLabs con voces clonadas; rutas Excel/OneDrive/Drive; estado por volumen (X, XI, XII)
+- [Excel .xlsm update](feedback_excel_update.md) — Usar ws['V18']=valor (ref directa), NO row[21].value; verificar releyendo antes de reportar
+- [Elisia Pendientes Salesforce](project_elisia_pendientes.md) — CampaignIds placeholder pendientes; formularios móvil resueltos (overflow, padding, filemtime); shortcode alias _plus agregado
+- [Collins Pearls Website](project_collins_pearls.md) — Landing estática para Alex Collins personal pearl shopper; /tmp/collins_pearls.html; sin fotos, CSS orbs, ghost words, burbujas canvas+CSS
