@@ -5,7 +5,16 @@
       "Bash(*)",
       "Read",
       "Write",
-      "Edit"
+      "Edit",
+      "mcp__chrome-devtools__take_screenshot",
+      "mcp__chrome-devtools__navigate_page",
+      "mcp__chrome-devtools__emulate",
+      "mcp__chrome-devtools__list_pages",
+      "mcp__chrome-devtools__resize_page",
+      "mcp__claude_ai_Google_Drive__search_files",
+      "mcp__claude_ai_Google_Drive__read_file_content",
+      "mcp__mailchimp__search_campaigns",
+      "mcp__mailchimp__get_campaign_details"
     ]
   },
   "hooks": {
