@@ -206,10 +206,18 @@ Para C.2025: si Valid PBI TxState F25 ≈ 2,467 → OC correcto. Si ≈ 2,442 �
 ✅ Filtros canónicos AState: F26=Mkt Digital, F25=OC filter — validados ±0% vs PBI Live
 ✅ Filtros TxState: C.2026=OC filter confirmado vs PBI Live (0.0%); C.2025=OC (recomendado)
 ✅ Funnel CPL por canal: AState(Mkt Digital) + TxState(OC filter) — `funneles_ciclos.html`
-✅ Comparación BDD 3 funneles AState F25+F26 — `funnel_tres.html` + `funnel_tres_f25.html`
-✅ Verificación filtros TxState — `funnel_tres_txstate.html`
+✅ CPL por etapa visuales (3 HTMLs) — `cpl_etapas.html`, `canal_rentabilidad.html`, `index.html`
+✅ Inversión WA/Meta/Google separada desde Datorama granular (jun 8, 2026):
+   AState WA C.2026: $1,423,226 MXN → CPL/Lead $1,788 · CPL/DP $64,692 (MEJOR CANAL)
+   TxState WA C.2026: $741,976 MXN → CPL/Lead $3,171 · CPL/DP $741,976 (n=1 DP, no repr.)
+✅ HTMLs actualizados con valores corregidos + carpeta CPL_ANALISIS_2026 en OneDrive con 3 MDs
 ⏳ Pendiente: Confirmar filtro TxState C.2025 con PBI Live TxState (Valid: 2,467 vs 2,442?)
-⏳ Pendiente: Actualizar v4.xlsx con datos TxState (nueva hoja TXSTATE_CPL)
+⏳ Pendiente: TxState WA C.2025 — solicitar desglose Meta vs WA oct-dic 2025 a equipo medios
+
+## Inversión real por canal — C.2026 (fuente: Datorama granular, jun 8, 2026)
+AState: WA=$1,423k · Meta=$5,108k · Google=$3,055k · Total=$9,585k (v4 ref=$12,923k)
+TxState: WA=$742k · Meta=$2,583k · Google=$882k · Total=$4,207k (v4 ref=$6,306k)
+Datorama cubre campañas específicas; v4 puede incluir canales adicionales o fees de agencia.
 
 ## Personas
 - Cliente: Arkansas State University + Texas State University
