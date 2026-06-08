@@ -1,5 +1,5 @@
 - [Dashboard Proyectos](dashboard_proyectos.md) — Estado visual (🟢🟡⚠️🔴) de los 7 proyectos activos; fuente canónica: ~/Desktop/PROYECTOS_ESTATUS.md
-- [EEH Planeación 2027](project_eeh.md) — PPTX ejecutivo AState+TxState; funnel, CPL, perdidos por etapa; slides 4–8 listas, esperando feedback cliente
+- [EEH Planeación 2027](project_eeh.md) — Track Record completo C.2024/C.2025/C.2026; SF base 84k filas; funnel HTML generado; pendiente actualizar v4.xlsx con TxState + WhatsApp
 - [Trujillo Newsletter & Social](project_trujillo_newsletter.md) — 4 cuentas (LinkedIn+X × CJ+TCA); 148 posts/12 semanas; Semana 1 activa jun 2026; Lun+Mié ya posted; Jue+Vie pendientes
 - [Feedback parrilla social](feedback_parrilla_social.md) — Verificar posts ya publicados; marcar Posted en master col10; preferir artículos web cortos; X se postea manual
 - [Cuentas de Claude](user_accounts.md) — Cuenta compartida con hija: enrique@ownmedia.com.mx; cuenta personal: enrique@dstudio.mx
