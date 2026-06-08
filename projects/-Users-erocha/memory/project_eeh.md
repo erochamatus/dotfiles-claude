@@ -202,17 +202,22 @@ Para C.2025: si Valid PBI TxState F25 ≈ 2,467 → OC correcto. Si ≈ 2,442 �
 ---
 
 ## Estado (jun 8, 2026)
-✅ Master TR único — `Track_Record_Ak_2025-26.xlsx` (70,845 filas, todos ciclos, AState+TxState)
-✅ Filtros canónicos AState: F26=Mkt Digital, F25=OC filter — validados ±0% vs PBI Live
-✅ Filtros TxState: C.2026=OC filter confirmado vs PBI Live (0.0%); C.2025=OC (recomendado)
-✅ Funnel CPL por canal: AState(Mkt Digital) + TxState(OC filter) — `funneles_ciclos.html`
-✅ CPL por etapa visuales (3 HTMLs) — `cpl_etapas.html`, `canal_rentabilidad.html`, `index.html`
-✅ Inversión WA/Meta/Google separada desde Datorama granular (jun 8, 2026):
-   AState WA C.2026: $1,423,226 MXN → CPL/Lead $1,788 · CPL/DP $64,692 (MEJOR CANAL)
-   TxState WA C.2026: $741,976 MXN → CPL/Lead $3,171 · CPL/DP $741,976 (n=1 DP, no repr.)
-✅ HTMLs actualizados con valores corregidos + carpeta CPL_ANALISIS_2026 en OneDrive con 3 MDs
-⏳ Pendiente: Confirmar filtro TxState C.2025 con PBI Live TxState (Valid: 2,467 vs 2,442?)
-⏳ Pendiente: TxState WA C.2025 — solicitar desglose Meta vs WA oct-dic 2025 a equipo medios
+✅ Master TR con 2027: `con_2027_2.xlsx` (77,933 filas — incluye Fall/Spring 2027)
+✅ Filtros canónicos ACTUALIZADO: OC filter para AMBAS universidades (AState y TxState)
+✅ CPL recalculado desde TR real — valores anteriores en HTMLs estaban incorrectos (sobrestimados 48-64%)
+✅ cpl_etapas.html: OC filter · valores correctos · tab EEH Combinado como default · publicado GH Pages
+⏳ Pendiente: Recalcular funneles_ciclos.html y canal_rentabilidad.html con OC filter (mismo fix)
+⏳ Pendiente: Separar leads Court Avenue vs Tribalo por utm_id (ver nota Tribalo abajo)
+
+## ⚠️ NOTA INTERNA — Tribalo (no incluir en presentación)
+
+El reporte de Power BI incluye leads de DOS agencias: **Court Avenue** y **Tribalo**.
+- Court Avenue se identifica por utm_id con sus campañas propias
+- Tribalo se identifica por `utm_id` conteniendo "tribalo" (o similar)
+- **Problema:** las inversiones registradas en `Inversion Universidades_24-25-26.xlsx` corresponden SOLO a Court Avenue. Los CPL actuales mezclan leads de ambas agencias pero solo reflejan la inversión de una.
+- **Impacto:** CPL subestimado porque el denominador (leads) incluye trabajo de Tribalo que no tiene inversión asignada en nuestros archivos.
+- **Acción pendiente:** Solicitar inversión de Tribalo por ciclo, o filtrar TR excluyendo utm_id=tribalo para calcular CPL limpio de Court Avenue únicamente.
+- **Nota:** No corregir esto en los HTMLs de presentación hasta tener claridad con el cliente.
 
 ## Inversión real por canal — C.2026 (fuente: Datorama granular, jun 8, 2026)
 AState: WA=$1,423k · Meta=$5,108k · Google=$3,055k · Total=$9,585k (v4 ref=$12,923k)
