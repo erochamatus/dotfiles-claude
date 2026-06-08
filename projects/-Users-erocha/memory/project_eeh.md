@@ -74,13 +74,22 @@ PBI_OC = {
 
 ---
 
-## Filtros del PBI BDD (para referencia)
+## Filtros del PBI BDD (verificados 8 jun 2026 — imágenes reales del PBI)
 
 ```
-utm_id excluidos: dforce, eluniversal, QR_Kuthy, QR_Tajonar, reforma, study_portals
-Origen Conjunto excluidos: Prospección Grupal, Recomendación Grupal, Deportivo Grupal
-Tipo de Origen: Digital
-Equipo efectivo: Mkt Digital (el filtro "Tipo Origen = Digital" equivale a esto)
+utm_id excluidos (REAL): SOLO dforce, QR_Kuthy, QR_Tajonar
+  ← study_portals, eluniversal, reforma: NO se excluyen (estaban mal documentados)
+  ← Para F25 AState: ninguno de los 3 excluidos aparece en los datos (0 leads) — sin efecto
+
+Origen Conjunto incluidos: Digital y Redes Grupal, Esfuerzo Campus Grupal,
+  Llamada entrada/Visita campus Grupal, MailChimp Grupal, Marketplace Grupal, Página Web Grupal
+Origen Conjunto excluido: Deportivo Grupal
+Sin filtro de Equipo (Mkt Digital / Mkt Orgánico ambos incluidos)
+
+Filtro canónico TR para coincidir con PBI Live:
+  OC filter (6 valores) + stage_date ≤ cutoff + sin filtro Equipo
+  → F25 AState: Valid→DP match 0.0% exacto con PBI Live ✅
+  → F26 AState: stages ligeramente altos (+1-6%) con OC filter; Mkt Digital = mejor match ±1-3%
 ```
 
 ---
