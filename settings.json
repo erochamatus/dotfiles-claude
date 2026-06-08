@@ -1,5 +1,4 @@
 {
-  "theme": "dark",
   "permissions": {
     "allow": [
       "Bash(*)",
@@ -30,10 +29,20 @@
       }
     ]
   },
+  "language": "Español",
+  "voice": {
+    "enabled": true,
+    "mode": "hold"
+  },
+  "theme": "dark",
+  "voiceEnabled": true,
   "mcpServers": {
     "elevenlabs": {
       "command": "npx",
-      "args": ["-y", "@elevenlabs/elevenlabs-mcp"],
+      "args": [
+        "-y",
+        "@elevenlabs/elevenlabs-mcp"
+      ],
       "env": {
         "ELEVENLABS_API_KEY": "sk_e01b8b32db0fa148c6b231e3d895c283fbd0ab35c0a48f46"
       }
