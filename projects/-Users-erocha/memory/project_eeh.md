@@ -174,36 +174,41 @@ def classify(oc, op, us, ls):
 
 ---
 
-## Verificación filtros TxState (8 jun 2026)
+## Verificación filtros TxState (8 jun 2026) — CONFIRMADO con PBI
 
-Script: `~/.claude/jobs/a9550654/tmp/verify_txstate.py`
+Scripts: `~/.claude/jobs/a9550654/tmp/verify_txstate.py`, `verify_txstate_c2026.py`, `recalc_txstate_oc.py`
 Visual: `~/.claude/jobs/a9550654/tmp/funnel_tres_txstate.html`
 
-| Ciclo | Mkt Digital | OC filter | Δ DP | Filtro canónico |
-|-------|------------|-----------|------|-----------------|
-| F26 TxState | 4,574 / DP=21 | 4,600 (+26) / DP=23 | +9.5% | **Mkt Digital** ✅ |
-| F25 TxState | 10,635 / DP=36 | 10,664 (+29) / DP=39 | +8.3% | Mkt Digital (default) ⚠️ |
-| F24 TxState | 17 (piloto) | 17 | 0 | sin diferencia |
+**IMPORTANTE: TxState usa OC filter en TODOS los ciclos (diferente de AState).**
+PBI Image #13 (TxState C.2026, 8 jun 2026): Lead=7,651 Valid=3,124 Cit=673 Asist=300 AdmFee=50 ITEP=42 DP=25
 
-**TxState F26:** 26 leads Mkt Orgánico (Esfuerzo Campus + Llamada entrada) = genuinamente orgánicos campus.
-Igual que AState F26 (143 leads). Mkt Digital = correcto, OC sobreestima. Sin UTM exclusions.
+| Ciclo | Filtro | Resultado | Match PBI |
+|-------|--------|-----------|-----------|
+| **C.2026** | OC filter (F26+Sp26) | Lead=7,742 DP=25 | **0.0% ✅** confirmado |
+| **C.2026** | Mkt Digital | Lead=7,715 DP=23 | −8% ❌ subestima |
+| **C.2025** | OC filter (F25+Sp25) | Lead=10,743 DP=39 | recomendado (sin PBI ref) |
+| C.2024 | sin diferencia (piloto) | 21 leads | — |
 
-**TxState F25:** 29 leads Mkt Orgánico (Llamada 16 + Esfuerzo Campus 13). Solo 0.27% del total.
-Sin PBI TxState F25 para verificar. Usar **Mkt Digital por defecto** hasta confirmar con PBI.
-Si resulta que los 29 fueron reclasificados post-cutoff (análogo a AState F25 con 230 leads), cambiar a OC filter.
+**Por qué OC es correcto para TxState (vs Mkt Digital correcto para AState F26):**
+TxState PBI incluye leads Esfuerzo Campus + Llamada entrada (Mkt Orgánico) en su cuenta.
+AState F26 PBI los excluye vía Tipo de Origen = Digital. Diferente configuración por universidad.
 
-**UTM exclusions TxState:** ninguno de los 3 (dforce, QR_Kuthy, QR_Tajonar) aparece en ningún ciclo → sin efecto.
+**Nota PBI TxState "Fall 2026" = C.2026** (Fall + Spring 2026 combinados). Misma convención que en Excel.
+
+**UTM exclusions TxState:** ninguno de los 3 (dforce, QR_Kuthy, QR_Tajonar) en ningún ciclo → sin efecto.
+
+Para C.2025: si Valid PBI TxState F25 ≈ 2,467 → OC correcto. Si ≈ 2,442 → Mkt Digital correcto.
 
 ---
 
 ## Estado (jun 8, 2026)
 ✅ Master TR único — `Track_Record_Ak_2025-26.xlsx` (70,845 filas, todos ciclos, AState+TxState)
-✅ Filtros canónicos AState validados contra PBI BDD (±3% en todos los stages)
-✅ Filtros TxState verificados — F26 Mkt Digital confirmado; F25 Mkt Digital pendiente PBI
-✅ Funnel visual CPL por canal generado (8 canales, 3 ciclos, tabs AState/TxState)
-✅ Comparación BDD AState F25+F26 generada (`funnel_tres.html` + `funnel_tres_f25.html`)
-✅ Comparación filtros TxState generada (`funnel_tres_txstate.html`)
-⏳ Pendiente: Verificar filtro TxState F25 con PBI Live TxState
+✅ Filtros canónicos AState: F26=Mkt Digital, F25=OC filter — validados ±0% vs PBI Live
+✅ Filtros TxState: C.2026=OC filter confirmado vs PBI Live (0.0%); C.2025=OC (recomendado)
+✅ Funnel CPL por canal: AState(Mkt Digital) + TxState(OC filter) — `funneles_ciclos.html`
+✅ Comparación BDD 3 funneles AState F25+F26 — `funnel_tres.html` + `funnel_tres_f25.html`
+✅ Verificación filtros TxState — `funnel_tres_txstate.html`
+⏳ Pendiente: Confirmar filtro TxState C.2025 con PBI Live TxState (Valid: 2,467 vs 2,442?)
 ⏳ Pendiente: Actualizar v4.xlsx con datos TxState (nueva hoja TXSTATE_CPL)
 
 ## Personas
