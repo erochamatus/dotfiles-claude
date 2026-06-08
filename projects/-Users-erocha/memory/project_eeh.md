@@ -202,11 +202,13 @@ Para C.2025: si Valid PBI TxState F25 ≈ 2,467 → OC correcto. Si ≈ 2,442 �
 ---
 
 ## Estado (jun 8, 2026)
-✅ Master TR con 2027: `con_2027_2.xlsx` (77,933 filas — incluye Fall/Spring 2027)
-✅ Filtros canónicos ACTUALIZADO: OC filter para AMBAS universidades (AState y TxState)
-✅ CPL recalculado desde TR real — valores anteriores en HTMLs estaban incorrectos (sobrestimados 48-64%)
-✅ cpl_etapas.html: OC filter · valores correctos · tab EEH Combinado como default · publicado GH Pages
-⏳ Pendiente: Recalcular funneles_ciclos.html y canal_rentabilidad.html con OC filter (mismo fix)
+✅ **TR ÚNICO:** `con_2027_2.xlsx` (77,933 filas — incluye Fall/Spring 2027; reemplaza Track_Record_Ak_2025-26.xlsx)
+✅ Filtros canónicos: **OC filter para AMBAS universidades** (AState y TxState) — filtro unificado
+✅ CPL recalculado desde TR real — valores anteriores sobrestimados 48-64%; ahora correctos
+✅ Los 3 HTMLs actualizados y publicados en GitHub Pages:
+   - cpl_etapas.html: OC filter · EEH Combinado como tab default
+   - funneles_ciclos.html: OC filter · datos por canal corregidos
+   - canal_rentabilidad.html: OC filter · totales y canales corregidos
 ⏳ Pendiente: Separar leads Court Avenue vs Tribalo por utm_id (ver nota Tribalo abajo)
 
 ## ⚠️ NOTA INTERNA — Tribalo (no incluir en presentación)
