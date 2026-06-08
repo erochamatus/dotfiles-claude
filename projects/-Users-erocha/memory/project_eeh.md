@@ -201,39 +201,42 @@ Para C.2025: si Valid PBI TxState F25 ≈ 2,467 → OC correcto. Si ≈ 2,442 �
 
 ---
 
-## Metodología WhatsApp extendida (verificada jun 8, 2026)
+## Metodología WhatsApp extendida — CANÓNICA (jun 8, 2026)
 
-El clasificador canónico para WhatsApp usa:
+Clasificador WhatsApp extendido (fuente correcta: export Salesforce con campo "Created By"):
 1. `Origen del Prospecto` contiene 'whatsapp' o 'wapp'
-2. `LeadSource` (col[3]) in ('CA_Facebook_Whatsapp', 'Whatsapp')
+2. `LeadSource` in ('CA_Facebook_Whatsapp', 'Whatsapp')
+3. `utm_source` = 'CA_Facebook_Whatsapp'
+4. **`Created By` = 'Ely Genjo'** ← campo clave, NO disponible en TR, solo en export SF
 
-Metodología extendida acordada con el cliente:
-- Leads SIN `Facebook_Campaign_Name__c` (col[58]) vacío → buscar adicionalmente:
-  - `utm_source` (col[48]) = 'CA_Facebook_Whatsapp'
-  - `LeadSource` (col[3]) = 'CA_Facebook_Whatsapp' (ya en clasificador)
-  - `Usuario Call Center` (col[25]) = 'Ely Genjo'
+**IMPORTANTE:** El TR tiene `Usuario Call Center` (col[25]) ≠ `Created By` del export SF.
+La diferencia es enorme: TR da solo +7 leads vía col[25], pero el export con Created By real
+da +376 leads nuevos para AState C.2026 y +103 para TxState C.2026.
 
-Resultado de la verificación (C.2026, OC filter, cutoff 2026-05-31):
-- AState: clasificador actual Lead=568, extendido Lead=575 (+7) — diferencia mínima
-- TxState: sin cambio (175 en ambos métodos)
+**Para recalcular WhatsApp C.2026:** usar el export SF (Todo_losleads_con_las_6_OC.xls)
+para identificar los Lead IDs, luego join con TR (primeros 15 chars del ID de 18) para
+obtener las etapas profundas (Asistido, AdmFee, ITEP, DP).
 
-⚠️ El clasificador actual ya captura casi todos los leads WA. La diferencia al agregar
-   utm_source + Ely Genjo es solo +7 leads en AState C.2026. Los HTMLs usan 565/568 (antes/después).
+**Cifras CANÓNICAS C.2026 (aplicadas en HTMLs jun 8, 2026):**
+- AState: Lead=942, Validado=867, Perfilado=442, Citado=391, Asistido=200, AdmFee=50, ITEP=45, DP=31
+- TxState: Lead=276, Validado=234, Perfilado=122, Citado=112, Asistido=47, AdmFee=6, ITEP=4, DP=1
 
-**"Ely Genjo"** = nombre en col[25] Usuario Call Center, agente de WhatsApp de CA.
-Los leads "Validado por Genjo" / "Perfilado por Genjo" en col[39] Lead LeadManagement
-también corresponden a su actividad (2,560 validaciones en el TR completo).
+**Ely Genjo:** agente que crea leads WA directamente en SF (Created By).
+En el TR, col[39] = "Validado por Genjo" / "Perfilado por Genjo" (2,560 validaciones totales)
+pero estos NO son equivalentes al "Created By" del export — no usar col[39] para clasificar WA.
 
 ---
 
-## Estado (jun 8, 2026)
-✅ **TR ÚNICO:** `con_2027_2.xlsx` (77,933 filas — incluye Fall/Spring 2027; reemplaza Track_Record_Ak_2025-26.xlsx)
-✅ Filtros canónicos: **OC filter para AMBAS universidades** (AState y TxState) — filtro unificado
-✅ CPL recalculado desde TR real — valores anteriores sobrestimados 48-64%; ahora correctos
-✅ Los 3 HTMLs actualizados y publicados en GitHub Pages:
-   - cpl_etapas.html: OC filter · EEH Combinado como tab default
-   - funneles_ciclos.html: OC filter · datos por canal corregidos
-   - canal_rentabilidad.html: OC filter · totales y canales corregidos
+## Estado (jun 8, 2026) — ACTUALIZACIÓN FINAL
+✅ **TR ÚNICO:** `con_2027_2.xlsx` (77,933 filas — incluye Fall/Spring 2027)
+✅ **WhatsApp C.2026 metodología extendida aplicada** — AState 565→942, TxState 173→276
+   Fuente: `Todo_losleads_con_las_6_OC.xls` (export SF con Created By real)
+   Join con TR por Lead ID (15 chars) para etapas profundas
+✅ **Todos los canales recalculados** desde TR + 6 OC filter + cutoff 31-may
+✅ Los 3 HTMLs actualizados y publicados GitHub Pages (commit 976fe3b):
+   - cpl_etapas.html: CPL totales recalculados + obs. text actualizado
+   - funneles_ciclos.html: todos los canales C.2026 + C.2025 recalculados
+   - canal_rentabilidad.html: delta heatmap con datos consistentes; WA extendido
 ⏳ Pendiente: Separar leads Court Avenue vs Tribalo por utm_id (ver nota Tribalo abajo)
 
 ## ⚠️ NOTA INTERNA — Tribalo (no incluir en presentación)
