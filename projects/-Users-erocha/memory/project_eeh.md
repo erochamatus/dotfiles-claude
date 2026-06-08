@@ -201,6 +201,31 @@ Para C.2025: si Valid PBI TxState F25 ≈ 2,467 → OC correcto. Si ≈ 2,442 �
 
 ---
 
+## Metodología WhatsApp extendida (verificada jun 8, 2026)
+
+El clasificador canónico para WhatsApp usa:
+1. `Origen del Prospecto` contiene 'whatsapp' o 'wapp'
+2. `LeadSource` (col[3]) in ('CA_Facebook_Whatsapp', 'Whatsapp')
+
+Metodología extendida acordada con el cliente:
+- Leads SIN `Facebook_Campaign_Name__c` (col[58]) vacío → buscar adicionalmente:
+  - `utm_source` (col[48]) = 'CA_Facebook_Whatsapp'
+  - `LeadSource` (col[3]) = 'CA_Facebook_Whatsapp' (ya en clasificador)
+  - `Usuario Call Center` (col[25]) = 'Ely Genjo'
+
+Resultado de la verificación (C.2026, OC filter, cutoff 2026-05-31):
+- AState: clasificador actual Lead=568, extendido Lead=575 (+7) — diferencia mínima
+- TxState: sin cambio (175 en ambos métodos)
+
+⚠️ El clasificador actual ya captura casi todos los leads WA. La diferencia al agregar
+   utm_source + Ely Genjo es solo +7 leads en AState C.2026. Los HTMLs usan 565/568 (antes/después).
+
+**"Ely Genjo"** = nombre en col[25] Usuario Call Center, agente de WhatsApp de CA.
+Los leads "Validado por Genjo" / "Perfilado por Genjo" en col[39] Lead LeadManagement
+también corresponden a su actividad (2,560 validaciones en el TR completo).
+
+---
+
 ## Estado (jun 8, 2026)
 ✅ **TR ÚNICO:** `con_2027_2.xlsx` (77,933 filas — incluye Fall/Spring 2027; reemplaza Track_Record_Ak_2025-26.xlsx)
 ✅ Filtros canónicos: **OC filter para AMBAS universidades** (AState y TxState) — filtro unificado
