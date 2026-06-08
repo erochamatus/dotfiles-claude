@@ -174,13 +174,37 @@ def classify(oc, op, us, ls):
 
 ---
 
-## Estado (jun 7, 2026)
+## Verificación filtros TxState (8 jun 2026)
+
+Script: `~/.claude/jobs/a9550654/tmp/verify_txstate.py`
+Visual: `~/.claude/jobs/a9550654/tmp/funnel_tres_txstate.html`
+
+| Ciclo | Mkt Digital | OC filter | Δ DP | Filtro canónico |
+|-------|------------|-----------|------|-----------------|
+| F26 TxState | 4,574 / DP=21 | 4,600 (+26) / DP=23 | +9.5% | **Mkt Digital** ✅ |
+| F25 TxState | 10,635 / DP=36 | 10,664 (+29) / DP=39 | +8.3% | Mkt Digital (default) ⚠️ |
+| F24 TxState | 17 (piloto) | 17 | 0 | sin diferencia |
+
+**TxState F26:** 26 leads Mkt Orgánico (Esfuerzo Campus + Llamada entrada) = genuinamente orgánicos campus.
+Igual que AState F26 (143 leads). Mkt Digital = correcto, OC sobreestima. Sin UTM exclusions.
+
+**TxState F25:** 29 leads Mkt Orgánico (Llamada 16 + Esfuerzo Campus 13). Solo 0.27% del total.
+Sin PBI TxState F25 para verificar. Usar **Mkt Digital por defecto** hasta confirmar con PBI.
+Si resulta que los 29 fueron reclasificados post-cutoff (análogo a AState F25 con 230 leads), cambiar a OC filter.
+
+**UTM exclusions TxState:** ninguno de los 3 (dforce, QR_Kuthy, QR_Tajonar) aparece en ningún ciclo → sin efecto.
+
+---
+
+## Estado (jun 8, 2026)
 ✅ Master TR único — `Track_Record_Ak_2025-26.xlsx` (70,845 filas, todos ciclos, AState+TxState)
-✅ Filtros canónicos validados contra PBI BDD (±3% en todos los stages)
+✅ Filtros canónicos AState validados contra PBI BDD (±3% en todos los stages)
+✅ Filtros TxState verificados — F26 Mkt Digital confirmado; F25 Mkt Digital pendiente PBI
 ✅ Funnel visual CPL por canal generado (8 canales, 3 ciclos, tabs AState/TxState)
-✅ Comparación BDD 3 funneles generada (Fall 2026 cuadra, Fall 2025 Lead inflado)
+✅ Comparación BDD AState F25+F26 generada (`funnel_tres.html` + `funnel_tres_f25.html`)
+✅ Comparación filtros TxState generada (`funnel_tres_txstate.html`)
+⏳ Pendiente: Verificar filtro TxState F25 con PBI Live TxState
 ⏳ Pendiente: Actualizar v4.xlsx con datos TxState (nueva hoja TXSTATE_CPL)
-⏳ Pendiente: Recalcular funneles CPL por canal con master TR (reemplaza análisis anterior)
 
 ## Personas
 - Cliente: Arkansas State University + Texas State University
