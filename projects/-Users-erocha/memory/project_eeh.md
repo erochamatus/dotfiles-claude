@@ -43,13 +43,33 @@ MASTER = '~/Downloads/Track_Record_Ak_2025-26.xlsx'
 # Filtros a aplicar SIEMPRE:
 # 1. Ciclo == 'Fall 2026' | 'Fall 2025' | 'Fall 2024' | etc.
 # 2. Company == 'AState' | 'TxState'
-# 3. Equipo == 'Mkt Digital'   ← CRÍTICO para coincidir con PBI BDD
+# 3. Equipo == 'Mkt Digital'   ← canónico para PBI Presentación (referencia aprobada)
 # 4. stage_date <= cutoff (sin filtro Created Date — metodología BDD PBI)
 
 # Cutoffs por ciclo:
 # Fall 2026 / Spring 2026 → 2026-05-31
 # Fall 2025 / Spring 2025 → 2025-05-31
 # Fall 2024 / Spring 2024 → 2024-05-31
+
+# NOTAS SOBRE FILTROS (validado 7 jun 2026):
+# - Mkt Digital cuadra con PBI Presentación ±1% en ambos ciclos ✅ (referencia oficial)
+# - PBI Live F25 (captura actual SF) muestra stages más altos que Presentación (+3-16%)
+#   → causa: reclasificación retroactiva de leads Mkt Digital → Mkt Orgánico entre 2025-2026
+#   → para cuadrar con PBI Live F25 usar todos los equipos (OC filter, sin filtro Equipo)
+# - PBI Live F26 cuadra con Mkt Digital ±1-3% (ciclo reciente, sin reclasificaciones aún)
+# - Los leads Mkt Orgánico (230 en F25, 143 en F26) tienen utm_id (none)/tribalo/courtavenue
+#   → no están en la lista de exclusión del PBI por utm_id
+#   → PBI los excluye por Tipo de Origen (Equipo field)
+#
+# OC filter (Origen Conjunto) — para cuadrar con PBI Live F25:
+PBI_OC = {
+    'Digital y Redes Grupal',
+    'Esfuerzo Campus Grupal',
+    'Llamada entrada/Visita campus Grupal',  # ← con 'Grupal' al final
+    'MailChimp Grupal',
+    'Marketplace Grupal',
+    'Página Web Grupal',
+}
 ```
 
 ---
@@ -81,15 +101,32 @@ Equipo efectivo: Mkt Digital (el filtro "Tipo Origen = Digital" equivale a esto)
 
 ## Validación TR vs PBI BDD (Fall 2025 AState — jun 7, 2026)
 
-| Etapa | TR (master) | PBI Ref | Δ% | Nota |
-|-------|-------------|---------|-----|------|
-| Lead | 17,698 | 14,436 | +22.6% | ⚠️ Inflado — retroactivo |
-| Validado | 4,485 | 4,526 | −0.9% | ✅ |
-| Citado | 1,875 | 1,878 | −0.2% | ✅ |
-| Asistido | 963 | 964 | −0.1% | ✅ |
-| DP | 175 | 175 | 0.0% | ✅ |
+**Filtro Mkt Digital → cuadra con PBI Presentación (referencia oficial)**
 
-⚠️ Lead F25 inflado +3,262 porque el master fue exportado jun 2026 (13 meses después del cutoff). Leads retroactivamente reclasificados como Fall 2025 después de mayo 2025. Para Lead count F25, usar PBI (14,436). Para stages Valid→DP, TR es confiable.
+| Etapa | TR Mkt Dig | PBI Ref | Δ% | PBI Live | Δ% |
+|-------|-----------|---------|-----|---------|-----|
+| Lead | 17,698 | 14,436 | +22.6% ⚠️ | 14,281 | +23.9% ⚠️ |
+| Validado | 4,485 | 4,526 | −0.9% ✅ | 4,647 | −3.5% |
+| Perfilado | 1,910 | 1,913 | −0.2% ✅ | 2,062 | −7.4% |
+| Citado | 1,875 | 1,878 | −0.2% ✅ | 2,026 | −7.5% |
+| Asistido | 963 | 964 | −0.1% ✅ | 1,082 | −11.0% |
+| AdmFee | 272 | 273 | −0.4% ✅ | 316 | −13.9% |
+| ITEP | 257 | 258 | −0.4% ✅ | 297 | −13.5% |
+| DP | 175 | 175 | 0.0% ✅ | 208 | −15.9% |
+
+**Filtro OC (todos equipos) → cuadra con PBI Live (Salesforce actual)**
+
+| Etapa | TR OC filter | PBI Live | Δ% |
+|-------|-------------|---------|-----|
+| Validado | 4,646 | 4,647 | −0.0% ✅✅ |
+| Perfilado | 2,062 | 2,062 | 0.0% ✅✅ |
+| Citado | 2,026 | 2,026 | 0.0% ✅✅ |
+| Asistido | 1,082 | 1,082 | 0.0% ✅✅ |
+| DP | 208 | 208 | 0.0% ✅✅ |
+
+⚠️ Lead siempre inflado +3,200-3,650 por reclasificación retroactiva (export jun 2026, 13 meses post-cutoff). Usar PBI (14,436 Ref / 14,281 Live) para Lead count.
+
+**Por qué difieren Mkt Digital y OC filter en F25:** 230 leads clasificados como Mkt Orgánico en el export de jun 2026 probablemente eran Mkt Digital cuando se generó la Presentación (2025). La reclasificación retroactiva los movió. El PBI Live (Salesforce actual) los incluye en su filter "Digital/OC", por eso el OC filter cuadra con PBI Live.
 
 ---
 
