@@ -7,5 +7,6 @@
 - [CMAGAZINE Project Context](project_cmagazine.md) — WordPress redesign + WP Engine→Closte migration; CSS fixes, PHP template, JS image fix, Drive/OneDrive folder structure
 - [Conciencia Jurídica Podcast](project_elevenlabs.md) — Revista jurídica; pipeline ElevenLabs con voces clonadas; rutas Excel/OneDrive/Drive; estado por volumen (X, XI, XII)
 - [Excel .xlsm update](feedback_excel_update.md) — Usar ws['V18']=valor (ref directa), NO row[21].value; verificar releyendo antes de reportar
+- [openpyxl compatibilidad xlsx](feedback_openpyxl_xlsx.md) — insert_rows() rompe array formula refs y fórmulas regulares; checklist XML obligatorio antes de entregar; orden: openpyxl → save → fix XML
 - [Elisia Pendientes Salesforce](project_elisia_pendientes.md) — CampaignIds placeholder pendientes; formularios móvil resueltos (overflow, padding, filemtime); shortcode alias _plus agregado
 - [Collins Pearls Website](project_collins_pearls.md) — Landing estática para Alex Collins personal pearl shopper; /tmp/collins_pearls.html; sin fotos, CSS orbs, ghost words, burbujas canvas+CSS
