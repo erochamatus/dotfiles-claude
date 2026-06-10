@@ -16,6 +16,56 @@ Reportes de Costo por Lead (CPL) para AState y TxState. Archivos entregables en:
 
 ---
 
+## RUTAS DE ARCHIVOS
+
+### Entregables
+```
+~/Library/CloudStorage/OneDrive-Personal/COURT AVENUE/2026/BELINDA/
+  ├── los_197_de PBI.xlsx          ← AState C.2026 (197 NI)
+  └── los_26_TxState_NI.xlsx       ← TxState C.2026 (26 NI)
+```
+
+### Fuente NI (Salesforce/TR)
+```
+~/Library/CloudStorage/OneDrive-Personal/COURT AVENUE/2026/PLANEACION 2027/
+  └── TR_C2026_AState_TxState.csv  ← 22,411 rows, 61 cols; master de leads
+      Cols clave: Universidad_Origen, Ciclo, Created Date, Nombre, Apellidos,
+                  Origen Conjunto, Origen del Prospecto, utm_source, utm_campaign,
+                  Fecha Pago Down Payment
+
+~/Downloads/
+  └── Los 23.xlsx                  ← 26 NI TxState con Fecha Pago (nombre engañoso)
+```
+
+### Datorama — Inversiones
+```
+~/Library/CloudStorage/OneDrive-Personal/COURT AVENUE/2026/PLANEACION 2027/INVERSIONES/DATORAMA/
+  ├── ASTATE/
+  │   ├── DATORAMA_ASTATE_por_Plataforma_2025.xlsx   ← Ene-Dic 2025 (consolidado)
+  │   ├── AK_Data por Plataforma por dia.xlsx         ← incluye Ene-2026
+  │   ├── AK-Data-Feb.xlsx / AK-Data-Marzo.xlsx
+  │   ├── AK-Data-Abril.xlsx / AK-Data-Mayo.xlsx
+  └── TXST/
+      ├── tx_oct_25.xlsx / tx_nov_25.xlsx / tx_dic_25.xlsx
+      │   (estructura: row5=headers, col2=Medio TXS, col11=COSTO)
+      ├── TX-Data-Feb.xlsx / TX-Data-Marzo.xlsx
+      ├── TX-Data-Abril.xlsx / TX-Data-Mayo.xlsx
+      │   (estructura: row5=headers, col3=Platform, col6=Cost)
+      └── TX_Data por Plataforma por dia.xlsx
+
+~/Library/CloudStorage/OneDrive-Personal/COURT AVENUE/2026/PLANEACION 2027/
+  └── Updated 23 June - Presupuestos Marketing Ago 2023 a Julio 2025 - Copia_v4.xlsx
+      Sheet TXST_CPL: contiene Ago-25 y Sep-25 Datorama para TxState
+      Sheet ASTATE_CPL: contiene datos AState por ciclo
+```
+
+### Script de referencia
+```
+~/Library/CloudStorage/OneDrive-Personal/.claude/jobs/a9550654/tmp/rebuild_los26.py
+```
+
+---
+
 ## FLUJO COMPLETO (reproducible por ciclo)
 
 ### Paso 1 — Obtener lista de NI

@@ -1,14 +1,8 @@
-- [Dashboard Proyectos](dashboard_proyectos.md) — Estado visual (🟢🟡⚠️🔴) de los 7 proyectos activos; fuente canónica: ~/Desktop/PROYECTOS_ESTATUS.md
-- [EEH Planeación 2027](project_eeh.md) — Filtros BDD validados vs PBI: AState F26=MktDig, F25=OC; TxState C.2026=OC confirmado; funneles HTML listos; pendiente v4.xlsx TxState
-- [Trujillo Newsletter & Social](project_trujillo_newsletter.md) — 4 cuentas (LinkedIn+X × CJ+TCA); Sem1 cerrada; Sem2 en curso: Lun SDNY Posted, Mié=Maduro+Huachicol, Vie=Fuero+INTERPOL
-- [Feedback parrilla social](feedback_parrilla_social.md) — Verificar posts ya publicados; marcar Posted en master col10; preferir artículos web cortos; X se postea manual
-- [Cuentas de Claude](user_accounts.md) — Cuenta compartida con hija: enrique@ownmedia.com.mx; cuenta personal: enrique@dstudio.mx
-- [GENJO Project Context](project_genjo.md) — Lead validation project for AState+TxState; file locations, FTP masters, COMPARACION metrics, Power BI comparativo
-- [CMAGAZINE Project Context](project_cmagazine.md) — WordPress redesign + WP Engine→Closte migration; CSS fixes, PHP template, JS image fix, Drive/OneDrive folder structure
-- [Conciencia Jurídica Podcast](project_elevenlabs.md) — Revista jurídica; pipeline ElevenLabs con voces clonadas; rutas Excel/OneDrive/Drive; estado por volumen (X, XI, XII)
-- [Excel .xlsm update](feedback_excel_update.md) — Usar ws['V18']=valor (ref directa), NO row[21].value; verificar releyendo antes de reportar
-- [openpyxl compatibilidad xlsx](feedback_openpyxl_xlsx.md) — insert_rows() rompe array formula refs y fórmulas regulares; checklist XML obligatorio antes de entregar; orden: openpyxl → save → fix XML
-- [Elisia Pendientes Salesforce](project_elisia_pendientes.md) — CampaignIds placeholder pendientes; formularios móvil resueltos (overflow, padding, filemtime); shortcode alias _plus agregado
-- [Collins Pearls Website](project_collins_pearls.md) — Landing estática para Alex Collins personal pearl shopper; /tmp/collins_pearls.html; sin fotos, CSS orbs, ghost words, burbujas canvas+CSS
-- [Audiencias Meta EEH](project_audiencias_meta.md) — Decks Arkansas (9 slides) + Elisia (6 slides) en retrabajo; estrategia paid media Meta AState+TxState planeación 2027
-- [Reportes CPL Belinda](project_belinda_cpl.md) — los_197 AState (197 NI, CPL Meta $171k, Google $92k) + los_26 TxState (26 NI, CPL Meta $356k, Google $179k); CN redistribuido; ~/BELINDA/
+- [Reportes CPL Belinda](project_belinda_cpl.md) — FLUJO PRINCIPAL: los_197 AState + los_26 TxState C.2026; metodología CN, pasos 1-6 reproducibles para C.2025; ~/BELINDA/
+- [GENJO Project Context](project_genjo.md) — Fuente de datos NI: FTP masters AState+TxState; rutas Google Drive + OneDrive; métricas COMPARACION May-2026
+- [EEH Planeación 2027](project_eeh.md) — Filtros BDD AState/TxState validados; funneles HTML listos; TR_C2026 CSV es el master de NI
+- [Audiencias Meta EEH](project_audiencias_meta.md) — Decks paid media Meta AState (Arkansas) + TxState (Elisia); en retrabajo
+- [openpyxl compatibilidad xlsx](feedback_openpyxl_xlsx.md) — insert_rows() rompe array formula refs; checklist XML obligatorio; orden: openpyxl → save → fix XML
+- [Excel .xlsm update](feedback_excel_update.md) — Usar ws['V18']=valor (ref directa), NO row[21].value
+- [Cuentas de Claude](user_accounts.md) — Compartida con hija: enrique@ownmedia.com.mx; personal: enrique@dstudio.mx
+- [Proyectos Secundarios](proyectos_secundarios.md) — Trujillo CJ newsletter/social, CMAGAZINE, ElevenLabs podcast, Elisia formularios
