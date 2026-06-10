@@ -160,28 +160,55 @@ Script de referencia: `/Users/erocha/.claude/jobs/a9550654/tmp/rebuild_los26.py`
 
 ---
 
-## ARCHIVOS ENTREGABLES C.2026
+## ESTADO ACTUAL DEL APP (cpl_app.py) — Jun 2026
 
-### `los_197_de PBI.xlsx` — AState
-- 197 NI | Website=69 | Meta=51 | Google=77
-- Inv: Meta=$8,740,663 | Google=$7,064,644 | Total=$15,805,307
-- CPL: Meta=$171,386 | Google=$91,749 | FB/IG=$210,034 | WA=$120,440
-- CN: 58 leads Web→Google (45.7%) | nota en R52-R53
+App funcional en `~/Documents/cpl_app/`. Bugs corregidos:
+- `_read_v4()` reescrito con headers dinámicos (cols 2-13 para meses, no cols 8-17)
+- Config: todas las rutas Datorama ahora tienen prefijo `INVERSIONES/`
+- `target_months` carga todos los meses del ciclo, no solo meses con NI
+- `_read_txst_oct_dic`: YouTube → Google; WhatsApp via col1 (campaña), no col2
+- Config AState C2026: meses Jan-Jul 2025 removidos (pre-ciclo)
+- CSV por ciclo: `ni_csv` en config por ciclo + flag `--csv` en CLI
 
-### `los_26_TxState_NI.xlsx` — TxState
-- 26 NI | Website=8 | Meta=12 | Google=6
+Uso: `python3 cpl_app.py --ciclo C2026 --uni ambas`
+
+## DISCREPANCIAS CONOCIDAS (pendiente validar con cliente)
+
+### Inversión AState — CRÍTICO
+- App (Datorama): Google=$3,915,190 | Meta+WA=$8,235,027 | Total=$12,150,218
+- los_197 (PBI):  Google=$7,064,644 | Meta=$8,740,663   | Total=$15,805,307
+- **Causa**: los_197 usó Power BI como fuente de inversión en lugar de Datorama
+- **Acción**: los_197 tiene inversión Google INCORRECTA. Debe reconstruirse con datos del app
+- **Confirmado**: v4 ASTATE_CPL concuerda exactamente con el app ($3,915,190 Google)
+
+### NI Count — pendiente validación
+| Uni    | CSV actual | Manual | Diferencia | Explicación probable |
+|--------|-----------|--------|-----------|---------------------|
+| AState | 161 NI    | 197    | -36       | los_197 usó PBI que tenía más leads (distintos filtros o más reciente) |
+| TxState| 39 NI     | 26     | +13       | CSV más reciente que Los 23.xlsx; 13 pagos adicionales confirmados |
+
+**Pendiente obligatorio**: Obtener reporte fresco de Salesforce con Ciclo=Fall/Spring 2026, 
+Universidad_Origen=AState/TxState, Fecha Pago ≤ 31-May-2026 para confirmar NI correcto.
+Colocar en `PLANEACION 2027/` y correr app.
+
+## ARCHIVOS ENTREGABLES C.2026 (pendientes corrección)
+
+### `los_197_de PBI.xlsx` — AState — VALORES INCORRECTOS (inversión PBI ≠ Datorama)
+- 197 NI | Website=69 | Meta=51 | Google=77 (NI pendiente validación)
+- Inv: Meta=$8,740,663 | Google=$7,064,644 ← INCORRECTO según Datorama
+- Reconstruir con: `python3 cpl_app.py --ciclo C2026 --uni astate --csv <nuevo_reporte.csv>`
+
+### `los_26_TxState_NI.xlsx` — TxState — INVERSIÓN OK (~0.4% diferencia)
+- 26 NI | Website=8 | Meta=12 | Google=6 (NI pendiente validación: CSV tiene 39)
 - Inv: Meta=$4,275,791 | Google=$1,076,288 | Total=$5,352,079
-- CPL: Meta=$356,316 | Google=$179,381 | FB/IG=$450,576 | WA=$73,535 | Total=$205,849
-- CN: 5 leads Web→Google (36%) | nota en R41-R42
 
 ---
 
 ## PARA EL CICLO ANTERIOR (C.2025 = Ago-2024 a Jul-2025)
 
-El usuario quiere replicar este mismo análisis para C.2025. Pendiente definir:
-1. Lista NI fuente: probablemente misma ruta CSV con filtro Ciclo = Fall 2025 / Spring 2025
-2. Tasa Cross Network para cada universidad en C.2025
-3. Archivos Datorama C.2025: el v4 cubre "Ago 2023 a Julio 2025" — sheet TXST_CPL y ASTATE_CPL tienen datos por ciclo
-4. Fecha corte de NI (equivalente a 31/May/2026 para C.2025 sería ~31/May/2025 o final del ciclo)
-
-**How to apply:** Cuando el usuario pida "el ciclo anterior", "C.2025" o similar, arrancar con estos mismos 6 pasos usando los filtros de C.2025.
+- Fecha corte: 31/May/2025
+- CSV: necesita nuevo export de Salesforce con Ciclo=Fall 2025/Spring 2025 → colocar en `TR_C2025_AState_TxState.csv`
+- Datorama C.2025: configurado en config.yaml (plataforma_2025 + planeado para Ago-Dic 2024)
+- CN rates C.2025: pendiente confirmar con cliente (actualmente null en config)
+- v4 cubre Ago-2024 a Jul-2025 — usar solo si faltan archivos individuales
+- Correr: `python3 cpl_app.py --ciclo C2025 --uni ambas --csv TR_C2025_AState_TxState.csv`
