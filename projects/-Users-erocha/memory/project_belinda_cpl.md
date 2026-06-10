@@ -39,25 +39,45 @@ Reportes de Costo por Lead (CPL) para AState y TxState. Archivos entregables en:
 
 ### Datorama — Inversiones
 ```
-~/Library/CloudStorage/OneDrive-Personal/COURT AVENUE/2026/PLANEACION 2027/INVERSIONES/DATORAMA/
+~/Library/CloudStorage/OneDrive-Personal/COURT AVENUE/2026/PLANEACION 2027/INVERSIONES/
+
+  CONSOLIDADO_INVERSION_EEH.xlsx          ← resumen ejecutivo de inversión (no Datorama)
+  Inversion Universidades_24-25-26.xlsx   ← PRESUPUESTOS PLANEADOS (no actuals)
+      Hoja 'Inversion 25-26': AState desde Ene-2024, TxState desde Ago-2024
+      Útil para C.2025 en meses sin archivo Datorama individual
+
+  DATORAMA/
   ├── ASTATE/
-  │   ├── DATORAMA_ASTATE_por_Plataforma_2025.xlsx   ← Ene-Dic 2025 (consolidado)
-  │   ├── AK_Data por Plataforma por dia.xlsx         ← incluye Ene-2026
-  │   ├── AK-Data-Feb.xlsx / AK-Data-Marzo.xlsx
-  │   ├── AK-Data-Abril.xlsx / AK-Data-Mayo.xlsx
+  │   ├── DATORAMA_ASTATE_por_Plataforma_2025.xlsx  ← ACTUALS Ene-Dic 2025 ★ C.2026 y C.2025
+  │   │   (estructura: row5=headers, col1=Month, col3=Platform, col4=Campaign, col6=Cost)
+  │   ├── AK_Data por Plataforma por dia.xlsx        ← incluye Ene-2026
+  │   ├── AK-Data-Feb.xlsx  ← Feb-2026
+  │   ├── AK-Data-Marzo.xlsx / AK-Data-Abril.xlsx / AK-Data-Mayo.xlsx
+  │   │   (estructura 2026: row5=headers, col3=Platform, col6=Cost)
+  │   ├── ak_oct_25.xlsx / ak_nov_25.xlsx / ak_dic_25.xlsx  ← datos campaña Oct-Dic 2025
+  │   │   (estructura diferente: col=Plataforma FB, no tiene columna Cost directa — no usar para CPL)
+  │   └── DATORAMA_ASTATE_Consolidado_2025.xlsx / _2026.xlsx  ← generados por script, solo referencia
+  │
   └── TXST/
-      ├── tx_oct_25.xlsx / tx_nov_25.xlsx / tx_dic_25.xlsx
-      │   (estructura: row5=headers, col2=Medio TXS, col11=COSTO)
-      ├── TX-Data-Feb.xlsx / TX-Data-Marzo.xlsx
-      ├── TX-Data-Abril.xlsx / TX-Data-Mayo.xlsx
-      │   (estructura: row5=headers, col3=Platform, col6=Cost)
-      └── TX_Data por Plataforma por dia.xlsx
+      ├── DATORAMA_TXST_por_Plataforma_2025.xlsx     ← ACTUALS Ene-Dic 2025 ★ C.2025 TxState
+      │   (estructura: row5=headers, col1=Month, col3=Platform, col6='Media Cost Texas 2025')
+      ├── tx_oct_25.xlsx / tx_nov_25.xlsx / tx_dic_25.xlsx   ← Oct-Dic 2025
+      │   (estructura: row5=headers, col2=Medio TXS, col11=COSTO; Dic tiene col extra → col12)
+      ├── TX-Data-Feb.xlsx / TX-Data-Marzo.xlsx / TX-Data-Abril.xlsx / TX-Data-Mayo.xlsx
+      │   (estructura 2026: row5=headers, col3=Platform, col6=Cost)
+      └── TX_Data por Plataforma por dia.xlsx         ← incluye Ene-2026 TxState
 
 ~/Library/CloudStorage/OneDrive-Personal/COURT AVENUE/2026/PLANEACION 2027/
   └── Updated 23 June - Presupuestos Marketing Ago 2023 a Julio 2025 - Copia_v4.xlsx
-      Sheet TXST_CPL: contiene Ago-25 y Sep-25 Datorama para TxState
-      Sheet ASTATE_CPL: contiene datos AState por ciclo
+      Sheet TXST_CPL: Ago-25 y Sep-25 Datorama TxState (filas CICLO 2026, cols G/H/I)
+      Sheet ASTATE_CPL: datos AState por ciclo
 ```
+
+### Para C.2025 (Ago-2024 a Jul-2025) — fuentes por mes
+| Mes | AState | TxState |
+|-----|--------|---------|
+| Ago-Dic 2024 | `Inversion Universidades` (planeado) | `Inversion Universidades` (planeado) |
+| Ene-Jul 2025 | `DATORAMA_ASTATE_por_Plataforma_2025.xlsx` | `DATORAMA_TXST_por_Plataforma_2025.xlsx` |
 
 ### Script de referencia
 ```
