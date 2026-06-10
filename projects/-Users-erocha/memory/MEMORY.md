@@ -10,3 +10,4 @@
 - [openpyxl compatibilidad xlsx](feedback_openpyxl_xlsx.md) — insert_rows() rompe array formula refs y fórmulas regulares; checklist XML obligatorio antes de entregar; orden: openpyxl → save → fix XML
 - [Elisia Pendientes Salesforce](project_elisia_pendientes.md) — CampaignIds placeholder pendientes; formularios móvil resueltos (overflow, padding, filemtime); shortcode alias _plus agregado
 - [Collins Pearls Website](project_collins_pearls.md) — Landing estática para Alex Collins personal pearl shopper; /tmp/collins_pearls.html; sin fotos, CSS orbs, ghost words, burbujas canvas+CSS
+- [Audiencias Meta EEH](project_audiencias_meta.md) — Decks Arkansas (9 slides) + Elisia (6 slides) en retrabajo; estrategia paid media Meta AState+TxState planeación 2027
