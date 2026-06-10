@@ -11,3 +11,4 @@
 - [Elisia Pendientes Salesforce](project_elisia_pendientes.md) — CampaignIds placeholder pendientes; formularios móvil resueltos (overflow, padding, filemtime); shortcode alias _plus agregado
 - [Collins Pearls Website](project_collins_pearls.md) — Landing estática para Alex Collins personal pearl shopper; /tmp/collins_pearls.html; sin fotos, CSS orbs, ghost words, burbujas canvas+CSS
 - [Audiencias Meta EEH](project_audiencias_meta.md) — Decks Arkansas (9 slides) + Elisia (6 slides) en retrabajo; estrategia paid media Meta AState+TxState planeación 2027
+- [Reportes CPL Belinda](project_belinda_cpl.md) — los_197 AState (197 NI, CPL Meta $171k, Google $92k) + los_26 TxState (26 NI, CPL Meta $356k, Google $179k); CN redistribuido; ~/BELINDA/
