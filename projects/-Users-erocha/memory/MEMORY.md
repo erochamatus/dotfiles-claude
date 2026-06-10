@@ -1,4 +1,4 @@
-- [Reportes CPL Belinda](project_belinda_cpl.md) — FLUJO PRINCIPAL: los_197 AState + los_26 TxState C.2026; metodología CN, pasos 1-6 reproducibles para C.2025; ~/BELINDA/
+- [Reportes CPL Belinda](project_belinda_cpl.md) — App funcional en ~/Documents/cpl_app/; discrepancias NI (161 vs 197 AState) e inversión Google los_197 INCORRECTA (PBI≠Datorama); pendiente CSV Salesforce actualizado para cerrar C2026
 - [GENJO Project Context](project_genjo.md) — Fuente de datos NI: FTP masters AState+TxState; rutas Google Drive + OneDrive; métricas COMPARACION May-2026
 - [EEH Planeación 2027](project_eeh.md) — Filtros BDD AState/TxState validados; funneles HTML listos; TR_C2026 CSV es el master de NI
 - [Audiencias Meta EEH](project_audiencias_meta.md) — Decks paid media Meta AState (Arkansas) + TxState (Elisia); en retrabajo
