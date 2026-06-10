@@ -51,20 +51,37 @@ Newsletter y gestión de redes sociales para el despacho Trujillo Čenčič Abog
 | Fecha | Tema | Plataformas | Status |
 |-------|------|-------------|--------|
 | 22 may 2026 | Carta Editorial Vol. XII | LinkedIn CJ + TCA | Posted (fuera del plan 12 semanas) |
-| 2 jun 2026 | Maru Campos | LinkedIn + X, CJ + TCA | Posted (marcado en master) |
-| 4 jun 2026 | ICE / Migrantes | LinkedIn CJ + TCA | Posted (manual) |
-| 4 jun 2026 | Tren Interoceánico | X CJ + TCA | Posted (manual) |
+| 2 jun 2026 | Maru Campos | LinkedIn + X, CJ + TCA | Posted |
+| 4 jun 2026 | ICE / Migrantes | LinkedIn CJ + TCA | Posted |
+| 4 jun 2026 | Tren Interoceánico | X CJ + TCA | Posted |
+| 5 jun 2026 | Magnifica Humanitas / IA (encíclica papal) | LinkedIn + X, CJ + TCA | Posted |
+| 9 jun 2026 | Acusación SDNY — Rocha Moya | LinkedIn + X, CJ + TCA | Posted |
 
 ---
 
-## Semana 1 (2–6 jun 2026) — plan completo
+## Semana 1 (2–6 jun 2026) — CERRADA
 
-| Día | LinkedIn (CJ + TCA) | X (CJ + TCA) |
-|-----|---------------------|--------------|
-| Lun 2 | Maru Campos ✅ Posted | Maru Campos ✅ Posted |
-| Mié 4 | ICE / Migrantes ✅ Posted | Tren Interoceánico ✅ Posted |
-| Jue 5 | Acusación SDNY (Rocha Moya) | Acusación SDNY (Rocha Moya) |
-| Vie 6 | Huachicol Fiscal | Huachicol Fiscal |
+| Día | LinkedIn (CJ + TCA) | X (CJ + TCA) | Status |
+|-----|---------------------|--------------|--------|
+| Lun 2 | Maru Campos | Maru Campos | ✅ Posted |
+| Mié 4 | ICE / Migrantes | Tren Interoceánico | ✅ Posted |
+| Jue 5 | Magnifica Humanitas / IA | Magnifica Humanitas / IA | ✅ Posted |
+| Vie 6 | Huachicol Fiscal | Huachicol Fiscal | ⏭ Skipped |
+
+**Nota coyuntura:** No hay día fijo — se inserta según el tema del momento. Semana 1 fue la encíclica *Magnifica Humanitas* sobre IA (art: https://concienciajuridica.com/actualidad/magnifica-humanitas-derecho-ia/).
+
+---
+
+## Semana 2 (9–13 jun 2026) — EN CURSO
+
+| Día | LinkedIn (CJ + TCA) | X (CJ + TCA) | Status |
+|-----|---------------------|--------------|--------|
+| Lun 9 | Acusación SDNY | Acusación SDNY | ✅ Posted |
+| Mié 11 | Caso Maduro | Huachicol Fiscal | Planned |
+| Jue 12 | Coyuntura (TBD) | Coyuntura (TBD) | Pendiente |
+| Vie 13 | Fuero del Gobernador | Ficha INTERPOL | Planned |
+
+Archivo semana: `CJ_Parrilla_Semana2_Junio2026.xlsx`
 
 ---
 

@@ -1,6 +1,6 @@
 - [Dashboard Proyectos](dashboard_proyectos.md) — Estado visual (🟢🟡⚠️🔴) de los 7 proyectos activos; fuente canónica: ~/Desktop/PROYECTOS_ESTATUS.md
 - [EEH Planeación 2027](project_eeh.md) — Filtros BDD validados vs PBI: AState F26=MktDig, F25=OC; TxState C.2026=OC confirmado; funneles HTML listos; pendiente v4.xlsx TxState
-- [Trujillo Newsletter & Social](project_trujillo_newsletter.md) — 4 cuentas (LinkedIn+X × CJ+TCA); 148 posts/12 semanas; Semana 1 activa jun 2026; Lun+Mié ya posted; Jue+Vie pendientes
+- [Trujillo Newsletter & Social](project_trujillo_newsletter.md) — 4 cuentas (LinkedIn+X × CJ+TCA); Sem1 cerrada; Sem2 en curso: Lun SDNY Posted, Mié=Maduro+Huachicol, Vie=Fuero+INTERPOL
 - [Feedback parrilla social](feedback_parrilla_social.md) — Verificar posts ya publicados; marcar Posted en master col10; preferir artículos web cortos; X se postea manual
 - [Cuentas de Claude](user_accounts.md) — Cuenta compartida con hija: enrique@ownmedia.com.mx; cuenta personal: enrique@dstudio.mx
 - [GENJO Project Context](project_genjo.md) — Lead validation project for AState+TxState; file locations, FTP masters, COMPARACION metrics, Power BI comparativo
